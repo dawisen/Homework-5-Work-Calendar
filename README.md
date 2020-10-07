@@ -7,7 +7,7 @@
 
 - WHEN you scroll down you are presented with time blocks for standard business hours (9am-5pm)
 
--The time blocks are color-coded to indicate whether it is in the past (gray), present(red), or future (green)
+- The time blocks are color-coded to indicate whether it is in the past (gray), present(red), or future (green)
 
 - When you click on a time block you can enter an event
 
