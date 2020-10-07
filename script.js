@@ -3,8 +3,9 @@ var mySchedule = {};
 $(document).ready(function () {
   $("#currentDay").html("Today is " + moment().format("MMMM Do YYYY, h:mm:ss a"));// displays current day
 
-  checkTime();
+  
   checkSchedule();
+  checkTime();
 
     $(".saveBtn").on("click", function () {
       var thisTimeblock = $(this).parent().closest("div[id]");
@@ -51,43 +52,40 @@ $(document).ready(function () {
     if (mySchedule.hasOwnProperty('12') === true) {
       $("#12").find($("textarea")).val(mySchedule["12"]);
     }
-    if (mySchedule.hasOwnProperty('1') === true) {
-      $("#1").find($("textarea")).val(mySchedule["1"]);
+    if (mySchedule.hasOwnProperty('13') === true) {
+      $("#13").find($("textarea")).val(mySchedule["13"]);
     }
-    if (mySchedule.hasOwnProperty('2') === true) {
-      $("#2").find($("textarea")).val(mySchedule["2"]);
+    if (mySchedule.hasOwnProperty('14') === true) {
+      $("#14").find($("textarea")).val(mySchedule["14"]);
     }
-    if (mySchedule.hasOwnProperty('3') === true) {
-      $("#3").find($("textarea")).val(mySchedule["3"]);
+    if (mySchedule.hasOwnProperty('15') === true) {
+      $("#15").find($("textarea")).val(mySchedule["15"]);
     }
-    if (mySchedule.hasOwnProperty('4') === true) {
-      $("#4").find($("textarea")).val(mySchedule["4"]);
+    if (mySchedule.hasOwnProperty('16') === true) {
+      $("#16").find($("textarea")).val(mySchedule["16"]);
     }
-    if (mySchedule.hasOwnProperty('5') === true) {
-      $("#5").find($("textarea")).val(mySchedule["5"]);
+    if (mySchedule.hasOwnProperty('17') === true) {
+      $("#17").find($("textarea")).val(mySchedule["17"]);
     }
   }
 
   function checkTime() {
     var currentTime = moment().format("H");
-    var timeBlockElements = $(".timeblock").find($("textarea"));
-    for (var index = 0; index < timeBlockElements.length; index++) {
-      var elementID = timeBlockElements[index].id;
-      var manipID = $(timeBlockElements[index]).attr("id");
-      $(timeBlockElements[index].id).removeClass(".present .past .future");
-
-      if (elementID < currentTime) {
-        $(manipID).addClass("past");
-      } else if (elementID > currentTime) {
-        $(manipID).addClass("future");
-      } else {
-        $(manipID).addClass("present");
+    var hourBlock = $(".time-block"); //select all timeblocks
+    console.log(currentTime);
+    hourBlock.each(function () {
+      var hour = parseInt(this.id);
+      console.log(hour);
+      if (hour < currentTime ) {
+        $(this).find("textarea").addClass("past");
       }
-    }
+      else if (hour == currentTime) {
+        $(this).find("textarea").addClass("present");
+      }
+      else {
+        $(this).find("textarea").addClass("future");
+      }
+    })
+
   }
-  setInterval(checkTime(), 1000 * 60 * 5);
 })
-
-  
-
-//https://stackoverflow.com/questions/62462599/how-can-i-change-elements-style-based-on-the-time-of-day
