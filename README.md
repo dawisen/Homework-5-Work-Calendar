@@ -1,4 +1,4 @@
-# Homework-5-Work-Calendar
+# Work-Calendar
 
 <img src="screenshot.png">
 
