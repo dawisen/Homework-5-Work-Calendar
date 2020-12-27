@@ -1,5 +1,4 @@
-# Work-Calendar
-
+# Work Scheduler
 <img src="screenshot.png">
 
 # Functionality:
