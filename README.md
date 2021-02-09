@@ -1,4 +1,5 @@
 # Work Scheduler
+View the [deployed app](https://dawisen.github.io/Work-Scheduler/)
 <img src="screenshot.png">
 
 # Functionality:
