@@ -2,15 +2,32 @@
 View the [deployed app](https://dawisen.github.io/Work-Scheduler/)
 <img src="screenshot.png">
 
-# Functionality:
-- When you open the planner the current day is displayed at the top of the calendar using moment.js
+Description
+This project utilizes Moment.js and local storage allowing users to save work tasks in their browser window. When you open the planner the current day is displayed at the top of the calendar. As you scroll down you are presented with time blocks for standard business hours (9am-5pm). The time blocks are color-coded to indicate whether it is in the past (gray), present(red), or future (green). The saved events persist in local storage when you refresh the page
 
-- WHEN you scroll down you are presented with time blocks for standard business hours (9am-5pm)
+Table of Contents
+Installation
+Usage
+License
+Contributing
+Testing
+Questions
+Installation
+none
 
-- The time blocks are color-coded to indicate whether it is in the past (gray), present(red), or future (green)
+npm i
 
-- When you click on a time block you can enter an event
+Usage
+To use the repo, fork it to your github page or clone the repository.
 
-- You can click the save button for that time block to save your memo in local storage
+License
 
-- The saved events persist in local storage when you refresh the page
+Contributors
+dawisen
+
+Testing
+no tests available
+
+Questions
+If you have any questions or issues please contact me via email
+View my other projects here
