@@ -15,8 +15,7 @@ This project utilizes Moment.js and local storage allowing users to save work ta
 * [Questions](#Questions)
 
 ## Installation
-While inside the root directory run this command in the terminal
->npm i
+none
   
 ## Usage
 To use the repo, fork it to your github page or clone the repository.
